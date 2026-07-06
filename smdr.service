@@ -1,0 +1,11 @@
+[Unit]
+Description=Receptor de Logs Telefónicos SMDR
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/smdr/receptor_smdr.py
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
